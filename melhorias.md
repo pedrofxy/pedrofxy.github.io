@@ -1,0 +1,3 @@
+- CRO
+- Sessão com equipe e detalhes
+- imagem mais acima
