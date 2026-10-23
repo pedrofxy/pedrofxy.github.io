@@ -9,5 +9,6 @@ Prótese, implantodontia, periodontia e odontologia estética
 
 
 Dr Luiz Amaral 
-Diretor clínico 
+Diretor clínico
+CRO:  9367 DF
 Prótese, implantodontia e odontologia estética
