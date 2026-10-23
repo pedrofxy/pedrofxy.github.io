@@ -3776,3 +3776,25 @@ section.luxury-hero .hero-copy {
     padding: 12px;
   }
 }
+
+/* =========================================================
+   AJUSTE MOBILE — ESPAÇO ENTRE CABEÇALHO E TÍTULO DO HERO
+   O cabeçalho tem 78px no mobile. O conteúdo começa 48px
+   abaixo dele: 78px + 48px = 126px.
+   Remove a altura mínima do contêiner interno, que antes
+   centralizava o texto e gerava espaços vazios excessivos.
+   ========================================================= */
+@media (max-width: 900px) {
+  .hero.luxury-hero,
+  section.luxury-hero {
+    min-height: auto;
+    align-items: flex-start;
+    padding: 126px 0 52px;
+  }
+
+  .hero.luxury-hero .luxury-hero-content,
+  section.luxury-hero .luxury-hero-content {
+    min-height: 0;
+    display: block;
+  }
+}
