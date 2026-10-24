@@ -3528,6 +3528,12 @@ section.luxury-hero .hero-copy {
   }
 }
 
+@media (max-width: 1200px) {
+  .hero {
+    padding: 120px 0;
+  }
+}
+
 /* Em tablets e celulares, navegação recolhida e hambúrguer funcional. */
 @media (max-width: 1020px) {
   .header .nav-wrapper {
@@ -3579,6 +3585,10 @@ section.luxury-hero .hero-copy {
 
   .header .nav a:last-child {
     border-bottom: 0;
+  }
+
+  .hero {
+    padding: 100px 0;
   }
 }
 
@@ -3667,7 +3677,7 @@ section.luxury-hero .hero-copy {
   }
 }
 
-@media (max-width: 1200px) {
+/* @media (max-width: 1200px) {
   .hero {
     padding: 120px 0;
   }
@@ -3677,4 +3687,4 @@ section.luxury-hero .hero-copy {
   .hero {
     padding: 100px 0;
   }
-}
+} */
