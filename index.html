@@ -86,7 +86,7 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="./css/style.css?v=5" />
+    <link rel="stylesheet" href="./css/style.css?v=6" />
     <!-- Bootstrap Icons -->
     <link
       rel="stylesheet"
@@ -115,10 +115,13 @@
     </div>
 
     <!-- Cabeçalho -->
-    <!-- Cabeçalho -->
     <header class="header luxury-header">
       <div class="container nav-wrapper">
-        <a href="#inicio" class="logo" aria-label="Parnaso Ateliê Oral">
+        <a
+          href="#inicio"
+          class="logo"
+          aria-label="Parnaso Ateliê Oral — início"
+        >
           <img
             src="./img/logo_tansp.png"
             alt="Parnaso Ateliê Oral"
@@ -126,7 +129,7 @@
           />
         </a>
 
-        <nav class="nav" aria-label="Navegação principal">
+        <nav class="nav" id="menu-principal" aria-label="Navegação principal">
           <a href="#servicos">Serviços</a>
           <a href="#diferenciais">Diferenciais</a>
           <a href="#clinica">A clínica</a>
@@ -134,9 +137,9 @@
         </nav>
 
         <div class="header-contact">
-          <span>⌖ Asa Sul — Brasília/DF</span>
-          <i></i>
-          <span>◷ Atendimento 24 horas</span>
+          <span class="header-location">Asa Sul — Brasília/DF</span>
+          <span class="division-bar" aria-hidden="true"></span>
+          <span class="header-hours">Atendimento 24 horas</span>
         </div>
 
         <a
@@ -155,7 +158,11 @@
           aria-expanded="false"
           aria-controls="menu-principal"
         >
-          ☰
+          <span class="menu-icon" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
         </button>
       </div>
     </header>
@@ -237,7 +244,7 @@
 
             <div class="hero-location">
               <span>⌖ Asa Sul — Brasília/DF</span>
-              <i></i>
+              <span class="division-bar" aria-hidden="true"></span>
               <span>◷ Atendimento 24 horas</span>
             </div>
           </div>
@@ -884,7 +891,7 @@
         });
 
         window.addEventListener("resize", () => {
-          if (window.innerWidth > 800) {
+          if (window.innerWidth > 1020) {
             nav.classList.remove("nav-open");
             menuToggle.setAttribute("aria-expanded", "false");
             menuToggle.setAttribute("aria-label", "Abrir menu");
