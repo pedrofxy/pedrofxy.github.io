@@ -2476,6 +2476,17 @@ a {
   transition: 0.25s ease;
 }
 
+@media (max-width: 767px) {
+  .hero-whatsapp-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 24px 0 28px;
+    min-height: 56px;
+  }
+}
+
 .hero-whatsapp-button:hover {
   background: #1da851;
   box-shadow: 0 12px 30px rgba(37, 211, 102, 0.28);
