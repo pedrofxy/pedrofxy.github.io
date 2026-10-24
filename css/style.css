@@ -2417,7 +2417,7 @@ a {
   color: rgba(255, 255, 255, 0.82);
   font-size: 1.2rem;
   line-height: 1.55;
-  margin: 32px 0 38px;
+  margin: 0;
   max-width: 570px;
 }
 
@@ -2474,6 +2474,7 @@ a {
   min-width: 375px;
   padding: 17px 24px;
   transition: 0.25s ease;
+  margin: 24px 0;
 }
 
 @media (max-width: 767px) {
@@ -2481,8 +2482,9 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+    box-sizing: border-box;
     width: 100%;
-    margin: 24px 0;
+    min-width: 0;
     min-height: 56px;
   }
 }
@@ -2644,16 +2646,16 @@ a {
   }
 
   .luxury-hero .hero-subtitle {
+    margin: 0;
     font-size: 1.05rem;
   }
 
   .emergency-types {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    margin-bottom: 34px;
+    margin: 34px 0;
     width: 100%;
   }
-
   .emergency-type {
     padding: 0 6px;
   }
@@ -3662,5 +3664,17 @@ section.luxury-hero .hero-copy {
 @media (prefers-reduced-motion: reduce) {
   .menu-icon span {
     transition: none;
+  }
+}
+
+@media (max-width: 1200px) {
+  .hero {
+    padding: 120px 0;
+  }
+}
+
+@media (max-width: 1000px) {
+  .hero {
+    padding: 100px 0;
   }
 }
