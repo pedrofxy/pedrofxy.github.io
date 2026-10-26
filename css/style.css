@@ -2350,7 +2350,7 @@ a {
 
 .luxury-hero {
   align-items: center;
-  background: url("../img/hero-recepcao.png") center right / cover no-repeat;
+  background: url("../img/hero-recepcao.webp") center right / cover no-repeat;
   color: var(--white);
   display: flex;
   min-height: 100svh;

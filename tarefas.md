@@ -1,0 +1,3 @@
+- Reformular front-end
+- Desempenho mobile
+- Verificar eventos de clique e conversões 
