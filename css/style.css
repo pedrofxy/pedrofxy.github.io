@@ -3105,7 +3105,7 @@ section.luxury-hero {
   overflow: hidden;
 
   background-color: #11100e;
-  background-image: url("../img/hero-recepcao.png");
+  background-image: url("../img/hero-recepcao.webp");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -3185,9 +3185,11 @@ section.luxury-hero .hero-copy {
 
 /* Ícones das redes sociais */
 
-.social-links a .bi {
-  font-size: 18px;
-  line-height: 1;
+.social-links a svg {
+  display: block;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
 }
 
 .social-links a:hover {
