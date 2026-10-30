@@ -1,0 +1,20 @@
+PROPOSTA DE TOPO — PARNASO ATELIÊ ORAL
+
+ARQUIVOS
+- topo-parnaso.html: protótipo navegável independente, com menu mobile, hero, CTAs, lista de urgências e avaliações.
+- topo-parnaso.css: estilos responsivos e isolados pelo prefixo pa-.
+
+INTEGRAÇÃO AO SITE ATUAL
+1. Mantenha o cabeçalho com a logo verdadeira, GTM, GA4 e o restante das seções do site.
+2. Adapte a faixa superior atual para "Plantão odontológico 24h" e "Atendimento particular".
+3. Substitua apenas a seção atual <section class="hero luxury-hero" id="inicio">...</section> pelo novo bloco <section id="inicio" class="pa-hero">...</section> do protótipo.
+4. Insira as seções pa-urgent e pa-reviews-section logo depois do hero, se desejar.
+5. Coloque as regras CSS no fim do css/style.css, ajustando caso o CSS global do projeto ainda imponha estilo aos elementos.
+6. Incorpore o menu mobile e o rodapé de dois botões ao HTML principal, verificando se não conflitam com o menu e o botão flutuante atuais.
+7. Verifique no Google o link compartilhado https://share.google/HWwqK2HnZtegXTeoN e confirme a nota 5,0 antes de publicar.
+8. A foto de fundo anterior pode ser preservada; a demonstração usa gradientes para abrir sem depender das imagens do projeto.
+9. No GTM, confira disparos click_whats nos novos links wa.me, crie rastreamento específico de clique telefônico (tel:) e avaliações (data-cta).
+10. Não usar "atendendo agora" ou "tempo de resposta: 1 minuto" sem uma verificação real da disponibilidade e do tempo médio.
+
+IMPORTANTE
+Este projeto não substitui automaticamente o index.html e style.css atuais, pois foram encontrados apenas arquivos anteriores no histórico. É um protótipo orientador, não uma atualização já publicada.

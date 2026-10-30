@@ -24,6 +24,7 @@
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#11110f" />
 
     <title>Dentista 24 Horas na Asa Sul | Parnaso Ateliê Oral</title>
     <meta
@@ -75,7 +76,7 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="./css/style.css?v=12" />
+    <link rel="stylesheet" href="./css/style.css?v=13" />
 
     <link
       rel="preload"
@@ -98,11 +99,17 @@
     ></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    <!-- Barra superior -->
+    <!-- Informação objetiva sobre o plantão e o atendimento particular -->
     <div class="topbar">
       <div class="container topbar-content">
-        <span>Atendimento odontológico com acolhimento e segurança</span>
-        <a href="tel:+5561991899393">📞 (61) 99189-9393</a>
+        <span class="pa-topbar-emergency"
+          ><span class="pa-status-dot" aria-hidden="true"></span
+          ><strong>Urgência odontológica 24h</strong></span
+        >
+        <span class="pa-topbar-divider" aria-hidden="true"></span>
+        <span class="pa-topbar-private"
+          >Atendimento particular · Não aceitamos convênios</span
+        >
       </div>
     </div>
 
@@ -134,9 +141,10 @@
         </a>
 
         <nav class="nav" id="menu-principal" aria-label="Navegação principal">
+          <a href="#urgencias">Urgências</a>
           <a href="#servicos">Serviços</a>
-          <a href="#diferenciais">Diferenciais</a>
-          <a href="#clinica">A clínica</a>
+          <a href="#avaliacoes">Avaliações</a>
+          <a href="#clinica">Localização</a>
           <a href="#faq">Dúvidas</a>
         </nav>
 
@@ -155,107 +163,199 @@
           Falar no WhatsApp
         </a>
 
-        <button
-          class="menu-toggle"
-          type="button"
-          aria-label="Abrir menu"
-          aria-expanded="false"
-          aria-controls="menu-principal"
-        >
-          <span class="menu-icon" aria-hidden="true">
-            <span></span>
-            <span></span>
-            <span></span>
+        <div class="header-mobile-actions">
+          <span class="header-live-badge" aria-label="Plantão 24 horas ativo">
+            <span class="live-dot" aria-hidden="true"></span>
+            <span>24H Plantão</span>
           </span>
-        </button>
+
+          <button
+            class="menu-toggle"
+            type="button"
+            aria-label="Abrir menu"
+            aria-expanded="false"
+            aria-controls="menu-principal"
+          >
+            <span class="menu-icon" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </button>
+        </div>
       </div>
     </header>
 
     <main>
-      <!-- Hero premium -->
-      <section class="hero luxury-hero" id="inicio">
-        <div class="luxury-hero-overlay"></div>
-
+      <!-- Primeira tela: emergência, contato e prova social -->
+      <section
+        class="hero luxury-hero"
+        id="inicio"
+        aria-labelledby="hero-title"
+      >
+        <div class="luxury-hero-overlay" aria-hidden="true"></div>
         <div class="container luxury-hero-content">
-          <div class="hero-copy">
-            <span class="eyebrow hero-eyebrow"> NÃO ACEITAMOS CONVÊNIOS! </span>
-
-            <h1>
-              Dentista <br />
-              24 horas
-              <span>na Asa Sul</span>
-            </h1>
-
-            <a
-              class="hero-whatsapp-button"
-              href="https://wa.me/5561991899393?text=Olá!%20Preciso%20de%20atendimento%20odontológico."
-              target="_blank"
-              rel="noopener noreferrer"
+          <div class="hero-copy pa-hero-copy">
+            <span class="pa-eyebrow"
+              ><span aria-hidden="true" class="pa-eyebrow-line"></span> NÃO
+              ACEITAMOS CONVÊNIOS — ATENDIMENTO PARTICULAR</span
             >
-              <span class="whatsapp-symbol" aria-hidden="true">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 16 16"
-                  fill="currentColor"
-                  stroke="currentColor"
-                  stroke-width="0.2"
-                  stroke-linejoin="round"
-                >
-                  <path
-                    d="M13.601 2.326A7.854 7.854 0 0 0 8.02 0C3.672 0 .132 3.539.13 7.89a7.854 7.854 0 0 0 1.053 3.94L.064 15.922l4.188-1.098a7.874 7.874 0 0 0 3.768.96h.003c4.347 0 7.89-3.54 7.89-7.89a7.85 7.85 0 0 0-2.312-5.568zM8.02 14.45a6.56 6.56 0 0 1-3.341-.915l-.24-.142-2.495.654.665-2.433-.156-.25a6.528 6.528 0 0 1-1.003-3.472c.002-3.618 2.946-6.563 6.568-6.563a6.525 6.525 0 0 1 4.64 1.924 6.52 6.52 0 0 1 1.92 4.64c-.001 3.619-2.946 6.563-6.56 6.563zm3.6-4.91c-.197-.098-1.17-.577-1.353-.642-.182-.066-.315-.098-.446.098-.132.197-.51.643-.625.775-.115.131-.23.148-.428.05-.197-.099-.832-.307-1.584-.98-.585-.522-.98-1.166-1.095-1.363-.115-.197-.012-.304.086-.402.089-.088.197-.23.296-.345.098-.115.13-.197.197-.329.066-.131.033-.246-.016-.345-.05-.098-.446-1.075-.611-1.47-.16-.385-.323-.332-.446-.337l-.38-.007a.729.729 0 0 0-.526.246c-.18.197-.69.674-.69 1.643s.706 1.904.804 2.035c.098.132 1.387 2.117 3.36 2.969.47.202.836.323 1.122.413.471.15.9.128 1.24.078.378-.056 1.17-.478 1.336-.94.164-.461.164-.858.115-.94-.05-.082-.181-.131-.378-.23z"
-                  />
-                </svg>
-              </span>
-
-              <span>
-                <strong>FALAR NO WHATSAPP</strong>
-                <small>(PLANTÃO 24H)</small>
-              </span>
-
-              <span class="button-arrow">→</span>
-            </a>
-
-            <p class="hero-subtitle">
-              Atendimento odontológico a qualquer hora do dia, com equipe
-              preparada 24 horas. Estrutura completa em Brasília com radiografia
-              digital e scanner intraoral para diagnósticos precisos.
+            <h1 id="hero-title">Dentista 24 horas <span>em Brasília.</span></h1>
+            <p class="pa-lead">
+              Atendimento particular na Asa Sul para dor de dente, extrações,
+              tratamento de canal e outras urgências. Estrutura moderna com
+              radiografia digital e scanner intraoral.
             </p>
 
-            <div class="emergency-types">
-              <div class="emergency-type">
-                <span class="emergency-icon">♧</span>
-                <span>Dor de dente</span>
-              </div>
-
-              <div class="emergency-type">
-                <span class="emergency-icon">♢</span>
-                <span
-                  >Dente <br />
-                  quebrado</span
+            <div
+              class="pa-hero-actions"
+              aria-label="Canais para atendimento de urgência"
+            >
+              <a
+                class="pa-btn pa-btn-whatsapp"
+                href="https://wa.me/5561991899393?text=Ol%C3%A1%21%20Preciso%20de%20atendimento%20odontol%C3%B3gico%20de%20urg%C3%AAncia."
+                target="_blank"
+                rel="noopener noreferrer"
+                data-cta="hero-whatsapp"
+                aria-label="Chamar a clínica no WhatsApp para urgência odontológica"
+              >
+                <svg
+                  class="pa-btn-icon"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
                 >
-              </div>
-
-              <div class="emergency-type">
-                <span class="emergency-icon">◉</span>
-                <span>Inchaço</span>
-              </div>
-
-              <div class="emergency-type">
-                <span class="emergency-icon">♧</span>
-                <span>Trauma</span>
-              </div>
-
-              <div class="emergency-type">
-                <span class="emergency-icon">♢</span>
-                <span>Sangramento</span>
-              </div>
+                  <path
+                    d="M12.04 2C6.51 2 2.02 6.47 2.02 11.98c0 1.76.46 3.49 1.35 5.01L2 22l5.14-1.34a10.06 10.06 0 0 0 4.9 1.25h.01c5.52 0 10.02-4.48 10.02-9.99A9.98 9.98 0 0 0 12.04 2Zm0 18.23a8.34 8.34 0 0 1-4.24-1.16l-.3-.18-3.14.82.84-3.05-.19-.31a8.28 8.28 0 0 1-1.27-4.38 8.3 8.3 0 0 1 8.3-8.28 8.26 8.26 0 0 1 8.29 8.3 8.3 8.3 0 0 1-8.29 8.24Zm4.55-6.2c-.25-.13-1.48-.73-1.71-.82-.23-.08-.4-.12-.56.13-.17.25-.65.82-.79.98-.15.17-.3.19-.55.07-.25-.13-1.05-.39-1.98-1.23-.73-.65-1.23-1.45-1.37-1.7-.15-.25-.02-.39.11-.51.11-.11.25-.3.37-.44.13-.15.17-.25.25-.42.08-.16.04-.31-.02-.43-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.08 0 1.23.9 2.42 1.03 2.59.12.16 1.79 2.73 4.32 3.83.6.26 1.07.41 1.44.53.61.19 1.17.16 1.6.1.49-.08 1.48-.61 1.69-1.2.21-.59.21-1.09.15-1.2-.06-.1-.23-.17-.48-.3Z"
+                  />
+                </svg>
+                <span>Chamar no WhatsApp</span>
+              </a>
+              <a
+                class="pa-btn pa-btn-call"
+                href="tel:+5561991899393"
+                data-cta="hero-call"
+                aria-label="Ligar para a clínica"
+              >
+                <svg
+                  class="pa-btn-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.9"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.81.33 1.6.63 2.35a2 2 0 0 1-.45 2.11L8.02 9.45a16 16 0 0 0 6.53 6.53l1.27-1.27a2 2 0 0 1 2.11-.45c.75.3 1.54.51 2.35.63A2 2 0 0 1 22 16.92Z"
+                  />
+                </svg>
+                <span>Ligar agora</span>
+              </a>
             </div>
 
-            <div class="hero-location">
-              <span>⌖ Asa Sul — Brasília/DF</span>
-              <span class="division-bar" aria-hidden="true"></span>
-              <span>◷ Atendimento 24 horas</span>
+            <div class="pa-hero-social">
+              <a
+                class="pa-hero-rating"
+                href="https://share.google/HWwqK2HnZtegXTeoN"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-cta="hero-reviews"
+                aria-label="A clínica tem nota 5 de 5 no Google. Ver avaliações"
+              >
+                <span class="pa-stars" aria-hidden="true">★★★★★</span>
+                <span class="pa-rating-description"
+                  ><strong>5,0/5,0 no Google</strong
+                  ><small
+                    >Ver avaliações <span aria-hidden="true">↗</span></small
+                  ></span
+                >
+              </a>
+              <span class="pa-social-divider" aria-hidden="true"></span>
+              <a
+                class="pa-directions"
+                href="https://www.google.com/maps/search/?api=1&amp;query=SGAS%20915%20Centro%20Cl%C3%ADnico%20Advance%202%20Bras%C3%ADlia"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-cta="hero-directions"
+                >⌖ Como chegar</a
+              >
             </div>
+            <p class="pa-hero-note">
+              Atendimento particular. Consulte a disponibilidade pelo WhatsApp
+              ou telefone.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sintomas resumidos: seção de orientação visual após o CTA -->
+      <section
+        class="pa-urgent-section"
+        id="urgencias"
+        aria-labelledby="urgencias-title"
+      >
+        <div class="container">
+          <div class="pa-urgent-heading">
+            <span class="pa-section-kicker">URGÊNCIAS MAIS COMUNS</span>
+            <h2 id="urgencias-title">
+              Precisa de ajuda com algum destes sintomas?
+            </h2>
+            <p>
+              Entre em contato para contar o que aconteceu e receber orientação
+              da nossa equipe.
+            </p>
+          </div>
+          <div class="pa-urgent-grid">
+            <div class="pa-urgent-card">
+              <span aria-hidden="true">✦</span> Dor de dente intensa
+            </div>
+            <div class="pa-urgent-card">
+              <span aria-hidden="true">✦</span> Dente quebrado
+            </div>
+            <div class="pa-urgent-card">
+              <span aria-hidden="true">✦</span> Inchaço e infecção
+            </div>
+            <div class="pa-urgent-card">
+              <span aria-hidden="true">✦</span> Trauma ou sangramento
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Prova social: nota informada pela clínica, com avaliações no Google -->
+      <section
+        class="pa-reviews-section"
+        id="avaliacoes"
+        aria-labelledby="avaliacoes-title"
+      >
+        <div class="container pa-reviews-inner">
+          <div class="pa-reviews-copy">
+            <span class="pa-section-kicker"
+              >CONFIANÇA DE QUEM JÁ FOI ATENDIDO</span
+            >
+            <h2 id="avaliacoes-title">
+              Nossa clínica tem nota máxima no Google
+            </h2>
+            <p>
+              Confira as avaliações publicadas diretamente no perfil do Parnaso
+              Ateliê Oral.
+            </p>
+          </div>
+          <div class="pa-reviews-card">
+            <div class="pa-stars pa-stars-large" aria-hidden="true">★★★★★</div>
+            <div class="pa-reviews-score">
+              <strong>5,0</strong><span>de 5 no Google</span>
+            </div>
+            <a
+              class="pa-reviews-button"
+              href="https://share.google/HWwqK2HnZtegXTeoN"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-cta="reviews-section"
+              >Ver avaliações no Google <span aria-hidden="true">↗</span></a
+            >
           </div>
         </div>
       </section>
@@ -356,8 +456,16 @@
           </div>
 
           <div class="trust-item">
-            <span class="trust-number">4.9/5</span>
-            <span>Avaliação dos pacientes</span>
+            <a
+              class="trust-number pa-trust-rating"
+              href="https://share.google/HWwqK2HnZtegXTeoN"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-cta="trust-reviews"
+              aria-label="Ver avaliações 5 de 5 no Google"
+              >5,0/5</a
+            >
+            <span>Avaliações no Google</span>
           </div>
         </div>
       </section>
@@ -603,63 +711,6 @@
         </div>
       </section>
 
-      <!-- Depoimentos -->
-      <section class="testimonials-section section">
-        <div class="container">
-          <div class="section-heading centered">
-            <span class="eyebrow">QUEM JÁ FOI ATENDIDO</span>
-            <h2>Histórias que fazem sorrir</h2>
-          </div>
-
-          <div class="testimonials-grid">
-            <article class="testimonial-card">
-              <div class="stars">★★★★★</div>
-              <p>
-                “Fui atendida com muita atenção desde o primeiro contato. A
-                equipe explicou tudo e resolveu minha dor com muito cuidado.”
-              </p>
-              <div class="testimonial-author">
-                <div class="author-avatar">C</div>
-                <div>
-                  <strong>Carolina M.</strong>
-                  <small>Paciente da clínica</small>
-                </div>
-              </div>
-            </article>
-
-            <article class="testimonial-card">
-              <div class="stars">★★★★★</div>
-              <p>
-                “O atendimento foi rápido e acolhedor. O consultório é muito
-                confortável e todos foram extremamente profissionais.”
-              </p>
-              <div class="testimonial-author">
-                <div class="author-avatar">R</div>
-                <div>
-                  <strong>Rafael S.</strong>
-                  <small>Paciente da clínica</small>
-                </div>
-              </div>
-            </article>
-
-            <article class="testimonial-card">
-              <div class="stars">★★★★★</div>
-              <p>
-                “Cheguei preocupado e saí muito mais tranquilo. Recebi todas as
-                orientações e me senti seguro durante o procedimento.”
-              </p>
-              <div class="testimonial-author">
-                <div class="author-avatar">A</div>
-                <div>
-                  <strong>André P.</strong>
-                  <small>Paciente da clínica</small>
-                </div>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
       <!-- Clínica -->
       <section class="clinic-section section" id="clinica">
         <div class="container clinic-grid">
@@ -760,6 +811,17 @@
               <p>
                 Entre em contato pelo WhatsApp ou telefone para receber
                 orientação sobre disponibilidade e atendimento.
+              </p>
+            </details>
+
+            <details>
+              <summary>
+                Vocês aceitam convênios odontológicos?
+                <span>+</span>
+              </summary>
+              <p>
+                Não. O atendimento é particular. Para saber as formas de
+                pagamento, entre em contato com nossa equipe.
               </p>
             </details>
 
@@ -892,9 +954,9 @@
             </a>
 
             <a
-              href="https://share.google/WC026KO53JMN9wfzL"
+              href="https://share.google/HWwqK2HnZtegXTeoN"
               target="_blank"
-              aria-label="Google"
+              aria-label="Ver avaliações do Parnaso no Google"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -930,6 +992,51 @@
         <span>Responsável técnico: CRO DF 14688</span>
       </div>
     </footer>
+
+    <!-- Contato fixo no celular; substitui o botão flutuante somente no mobile -->
+    <nav
+      class="pa-mobile-actions"
+      aria-label="Contato rápido para urgência odontológica"
+    >
+      <a
+        class="pa-mobile-whatsapp"
+        href="https://wa.me/5561991899393?text=Ol%C3%A1%21%20Preciso%20de%20atendimento%20odontol%C3%B3gico%20de%20urg%C3%AAncia."
+        target="_blank"
+        rel="noopener noreferrer"
+        data-cta="sticky-whatsapp"
+        aria-label="Abrir WhatsApp da clínica"
+        ><svg
+          class="pa-btn-icon"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          aria-hidden="true"
+        >
+          <path
+            d="M12.04 2C6.51 2 2.02 6.47 2.02 11.98c0 1.76.46 3.49 1.35 5.01L2 22l5.14-1.34a10.06 10.06 0 0 0 4.9 1.25h.01c5.52 0 10.02-4.48 10.02-9.99A9.98 9.98 0 0 0 12.04 2Zm0 18.23a8.34 8.34 0 0 1-4.24-1.16l-.3-.18-3.14.82.84-3.05-.19-.31a8.28 8.28 0 0 1-1.27-4.38 8.3 8.3 0 0 1 8.3-8.28 8.26 8.26 0 0 1 8.29 8.3 8.3 8.3 0 0 1-8.29 8.24Zm4.55-6.2c-.25-.13-1.48-.73-1.71-.82-.23-.08-.4-.12-.56.13-.17.25-.65.82-.79.98-.15.17-.3.19-.55.07-.25-.13-1.05-.39-1.98-1.23-.73-.65-1.23-1.45-1.37-1.7-.15-.25-.02-.39.11-.51.11-.11.25-.3.37-.44.13-.15.17-.25.25-.42.08-.16.04-.31-.02-.43-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.08 0 1.23.9 2.42 1.03 2.59.12.16 1.79 2.73 4.32 3.83.6.26 1.07.41 1.44.53.61.19 1.17.16 1.6.1.49-.08 1.48-.61 1.69-1.2.21-.59.21-1.09.15-1.2-.06-.1-.23-.17-.48-.3Z"
+          /></svg
+        ><span>WhatsApp</span></a
+      >
+      <a
+        class="pa-mobile-call"
+        href="tel:+5561991899393"
+        data-cta="sticky-call"
+        aria-label="Ligar para a clínica"
+        ><svg
+          class="pa-btn-icon"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.9"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <path
+            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.81.33 1.6.63 2.35a2 2 0 0 1-.45 2.11L8.02 9.45a16 16 0 0 0 6.53 6.53l1.27-1.27a2 2 0 0 1 2.11-.45c.75.3 1.54.51 2.35.63A2 2 0 0 1 22 16.92Z"
+          /></svg
+        ><span>Ligar</span></a
+      >
+    </nav>
 
     <!-- Botão flutuante do WhatsApp -->
     <a

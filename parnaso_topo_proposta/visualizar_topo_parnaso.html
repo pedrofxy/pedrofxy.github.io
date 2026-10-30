@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#11110f">
+  <title>Proposta de topo — Parnaso Ateliê Oral</title>
+  <meta name="description" content="Protótipo de estrutura do topo, botões de urgência e avaliações do Google para Parnaso Ateliê Oral.">
+  <style>
+/* Protótipo isolado: classes com prefixo .pa- para evitar conflito com CSS original. */
+:root{--pa-bg:#11110f;--pa-ink:#f8f6f2;--pa-gold:#d2aa68;--pa-gold-dark:#a98043;--pa-muted:#beb9b0;--pa-green:#25d366;--pa-line:rgba(210,170,104,.27)}
+*{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font:16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;color:#1d1b17;background:#f8f5f0} a{color:inherit;text-decoration:none} button{font:inherit}.pa-container{width:min(100% - 36px,1160px);margin-inline:auto}
+.pa-utility{background:#080807;color:#ddd4c7;border-bottom:1px solid var(--pa-line);font-size:12px;letter-spacing:.025em}.pa-utility-inner{display:flex;align-items:center;justify-content:center;gap:13px;min-height:35px}.pa-utility strong{color:#ead5ae;font-weight:700}.pa-dot{display:inline-block;width:8px;height:8px;margin-right:8px;background:var(--pa-gold);border-radius:50%}.pa-utility-sep{color:#6a5e48}
+.pa-header{position:relative;z-index:15;background:#13120f;color:#fff;border-bottom:1px solid var(--pa-line)}.pa-header-inner{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:26px}.pa-wordmark{min-width:175px;display:flex;flex-direction:column;line-height:1.12;letter-spacing:.23em}.pa-wordmark-title{font-family:Georgia,serif;color:var(--pa-gold);font-size:24px}.pa-wordmark-sub{font-size:9px;letter-spacing:.38em;color:#efe9df;margin-top:4px}.pa-nav{display:flex;gap:26px;align-items:center;font-size:13px;color:#dfdbd4}.pa-nav a:hover,.pa-location-link:hover{color:var(--pa-gold)}.pa-header-right{display:flex;align-items:center;gap:18px}.pa-plantao{font-size:13px;font-weight:800;color:var(--pa-gold);border:1px solid var(--pa-line);border-radius:25px;padding:8px 11px;white-space:nowrap}.pa-plantao span{font-weight:500;color:#d5cdbf}.pa-header-cta{padding:11px 16px;color:#15120c;background:var(--pa-gold);font-weight:750;border-radius:7px;font-size:13px;white-space:nowrap}.pa-header-cta span{padding-left:8px}.pa-menu-button{display:none}
+.pa-hero{position:relative;isolation:isolate;color:var(--pa-ink);background-color:var(--pa-bg);background-image:radial-gradient(ellipse 70% 100% at 100% 50%,rgba(148,105,54,.24),transparent 74%),linear-gradient(100deg,#11110f 17%,#15130f 64%,#242019 100%);overflow:hidden}.pa-hero:after{content:"";pointer-events:none;position:absolute;right:-110px;top:0;bottom:0;width:min(48vw,650px);opacity:.24;background:repeating-linear-gradient(120deg,transparent 0 80px,rgba(210,170,104,.12) 81px 82px,transparent 83px 160px);z-index:-1}.pa-hero-inner{display:flex;align-items:center;min-height:590px;padding-block:72px 75px}.pa-hero-content{max-width:840px}.pa-eyebrow{display:flex;align-items:center;gap:13px;color:var(--pa-gold);font-size:12px;font-weight:800;letter-spacing:.21em}.pa-line{width:36px;height:2px;background:var(--pa-gold)}.pa-hero h1{font-family:Georgia,"Times New Roman",serif;font-weight:600;letter-spacing:-.036em;line-height:1.08;font-size:clamp(44px,5.2vw,72px);margin:24px 0 22px;max-width:810px}.pa-hero h1 span{display:block;color:var(--pa-gold)}.pa-lead{font-size:clamp(16px,1.5vw,19px);color:#e2ddd5;line-height:1.6;max-width:650px;margin:0 0 28px}.pa-actions{display:flex;gap:12px;flex-wrap:wrap}.pa-btn{border-radius:10px;display:inline-flex;align-items:center;justify-content:center;gap:11px;min-height:59px;padding:14px 24px;font-size:16px;font-weight:800;transition:transform .2s ease,background .2s ease}.pa-btn svg{width:22px;height:22px;flex:none}.pa-btn:hover{transform:translateY(-2px)}.pa-btn-primary{background:var(--pa-green);color:#102416;box-shadow:0 10px 35px rgba(37,211,102,.14)}.pa-btn-primary:hover{background:#3fe27e}.pa-btn-secondary{border:1px solid rgba(230,216,191,.65);color:#fff;background:rgba(255,255,255,.04)}.pa-btn-secondary:hover{background:rgba(255,255,255,.1)}.pa-social-row{display:flex;align-items:center;gap:26px;margin-top:31px}.pa-rating{display:flex;align-items:center;gap:12px}.pa-rating:hover strong,.pa-rating:hover small{color:var(--pa-gold)}.pa-stars{font-size:21px;letter-spacing:2px;color:#f0c56f;white-space:nowrap}.pa-rating strong{display:block;font-size:15px;color:#fff;line-height:1.2}.pa-rating small{display:block;font-size:12px;color:#ccc4ba;margin-top:4px}.pa-social-divider{width:1px;height:36px;background:var(--pa-line)}.pa-location-link{color:#e6dfd4;font-weight:600;font-size:14px}.pa-disclaimer{color:#a7a097;font-size:12px;margin:22px 0 0}
+.pa-urgent{background:#f8f5f0;padding:58px 0 62px}.pa-section-head{max-width:650px}.pa-section-kicker{display:block;font-size:11px;font-weight:800;color:#a47e44;letter-spacing:.22em}.pa-section-head h2,.pa-reviews-inner h2{font-family:Georgia,serif;font-size:clamp(30px,3vw,42px);font-weight:600;line-height:1.15;letter-spacing:-.03em;margin:12px 0}.pa-section-head p,.pa-reviews-inner p{color:#655e52;margin:0}.pa-urgent-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:28px}.pa-urgent-grid div{border:1px solid #e6ded2;background:#fff;border-radius:12px;min-height:85px;padding:23px 15px;display:flex;align-items:center;gap:11px;font-weight:650}.pa-urgent-grid span{color:#ba9154;font-size:21px}
+.pa-reviews-section{padding:68px 0;background:#e9e1d5}.pa-reviews-inner{display:grid;grid-template-columns:1fr 330px;gap:65px;align-items:center}.pa-reviews-box{background:#fff;border:1px solid #e4d5c1;box-shadow:0 14px 35px rgba(32,26,19,.055);border-radius:18px;text-align:center;padding:29px 24px}.pa-stars-large{font-size:28px}.pa-rating-big{font-size:40px;color:#171411;font-weight:850;letter-spacing:-.05em;margin:5px 0 20px}.pa-rating-big span{font-size:15px;letter-spacing:normal;font-weight:500;color:#6d6357}.pa-reviews-link{display:block;background:#211c17;color:#fff;padding:13px 12px;border-radius:9px;font-weight:750;font-size:14px}.pa-reviews-link:hover{background:#473522}.pa-address{background:#191714;color:#d8cec0;font-size:13px;padding:23px 0}.pa-address .pa-container{display:flex;gap:20px;align-items:center}.pa-address strong{color:var(--pa-gold)}.pa-mobile-sticky{display:none}
+:focus-visible{outline:3px solid #e9bd77;outline-offset:3px}
+@media(max-width:960px){.pa-nav{gap:15px}.pa-plantao{display:none}.pa-hero-inner{min-height:560px}.pa-reviews-inner{gap:35px}}
+@media(max-width:720px){.pa-container{width:min(100% - 32px,1160px)}.pa-utility{font-size:10px}.pa-utility-inner{gap:6px;justify-content:center;text-align:center;min-height:32px}.pa-utility-sep{display:none}.pa-utility-inner>span:last-child{display:none}.pa-header-inner{min-height:69px}.pa-wordmark{min-width:0}.pa-wordmark-title{font-size:21px}.pa-wordmark-sub{font-size:8px}.pa-header-cta{display:none}.pa-header-right{margin-left:auto}.pa-plantao{display:block;font-size:11px;padding:6px 9px}.pa-plantao span{font-size:10px}.pa-menu-button{width:39px;height:40px;display:flex;flex-direction:column;gap:5px;justify-content:center;align-items:center;padding:0;border:1px solid #554630;border-radius:7px;color:#fff;background:transparent;cursor:pointer}.pa-menu-button span{display:block;width:18px;height:2px;background:#f0e7d8}.pa-nav{display:none;position:absolute;top:69px;left:0;right:0;background:#191714;padding:15px 20px 20px;border-top:1px solid var(--pa-line);box-shadow:0 12px 25px #0006;flex-direction:column;align-items:stretch;z-index:20}.pa-nav.pa-nav-open{display:flex}.pa-nav a{padding:10px 0}.pa-hero-inner{min-height:auto;padding-block:41px 43px}.pa-hero:after{opacity:.11}.pa-eyebrow{font-size:10px;letter-spacing:.12em;gap:8px}.pa-line{width:23px}.pa-hero h1{font-size:clamp(37px,8.9vw,52px);letter-spacing:-.045em;line-height:1.1;margin:18px 0}.pa-lead{font-size:15px;line-height:1.55;margin-bottom:24px}.pa-actions{display:flex;flex-direction:column;gap:10px}.pa-btn{width:100%;min-height:55px;font-size:15px}.pa-social-row{margin-top:24px;gap:16px;flex-wrap:wrap}.pa-rating{gap:9px}.pa-stars{font-size:19px;letter-spacing:1px}.pa-rating strong{font-size:14px}.pa-rating small{font-size:12px}.pa-location-link{font-size:13px}.pa-disclaimer{font-size:11px;margin-top:17px}.pa-urgent{padding:40px 0}.pa-section-head h2,.pa-reviews-inner h2{font-size:32px}.pa-urgent-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.pa-urgent-grid div{font-size:13px;min-height:77px;padding:16px 12px}.pa-reviews-section{padding:48px 0}.pa-reviews-inner{grid-template-columns:1fr;gap:22px}.pa-reviews-box{max-width:100%}.pa-address{padding:26px 0 110px}.pa-address .pa-container{flex-direction:column;align-items:flex-start;gap:5px}.pa-mobile-sticky{position:fixed;bottom:0;left:0;right:0;z-index:50;display:grid;grid-template-columns:1.2fr 1fr;gap:10px;background:rgba(16,15,13,.97);padding:10px 12px calc(10px + env(safe-area-inset-bottom));border-top:1px solid rgba(210,170,104,.26);box-shadow:0 -9px 30px rgba(0,0,0,.3)}.pa-mobile-sticky a{display:flex;align-items:center;justify-content:center;border-radius:10px;font-size:15px;font-weight:800;min-height:49px}.pa-sticky-wa{background:var(--pa-green);color:#132717}.pa-sticky-call{color:#f5e9d9;border:1px solid #80694d}}
+@media(max-width:370px){.pa-hero h1{font-size:34px}.pa-social-row{gap:12px}.pa-social-divider{display:none}.pa-location-link{display:block;width:100%;margin-left:0}.pa-plantao{display:none}.pa-urgent-grid{gap:8px}.pa-stars{font-size:17px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.pa-btn{transition:none}}
+
+</style>
+</head>
+<body>
+  <!-- PROTÓTIPO VISUAL. Em produção, mantenha o logotipo, o menu e o GTM originais. -->
+  <div class="pa-utility"><div class="pa-container pa-utility-inner">
+    <span><span class="pa-dot" aria-hidden="true"></span><strong>Plantão odontológico 24h</strong></span>
+    <span class="pa-utility-sep" aria-hidden="true">•</span>
+    <span>Atendimento particular · Não aceitamos convênios</span>
+  </div></div>
+
+  <header class="pa-header"><div class="pa-container pa-header-inner">
+    <a href="#inicio" class="pa-wordmark" aria-label="Parnaso Ateliê Oral, início"><span class="pa-wordmark-title">PARNASO</span><span class="pa-wordmark-sub">ATELIÊ ORAL</span></a>
+    <nav class="pa-nav" id="pa-menu" aria-label="Menu principal"><a href="#urgencias">Urgências</a><a href="#avaliacoes">Avaliações</a><a href="#localizacao">Localização</a></nav>
+    <div class="pa-header-right"><span class="pa-plantao">24H <span>PLANTÃO</span></span><a class="pa-header-cta" href="https://wa.me/5561991899393?text=Ol%C3%A1%21%20Preciso%20de%20atendimento%20odontol%C3%B3gico%20de%20urg%C3%AAncia." target="_blank" rel="noopener noreferrer">Falar com a equipe <span aria-hidden="true">↗</span></a></div>
+    <button id="pa-menu-button" class="pa-menu-button" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="pa-menu"><span></span><span></span><span></span></button>
+  </div></header>
+
+  <main>
+    <!-- Este bloco é o substituto sugerido para a seção .hero.luxury-hero atual. -->
+    <section id="inicio" class="pa-hero" aria-labelledby="pa-title"><div class="pa-container pa-hero-inner">
+      <div class="pa-hero-content">
+        <div class="pa-eyebrow"><span class="pa-line" aria-hidden="true"></span> EMERGÊNCIA ODONTOLÓGICA · ASA SUL</div>
+        <h1 id="pa-title">Dentista 24 horas <span>na Asa Sul, Brasília.</span></h1>
+        <p class="pa-lead">Dor de dente, dente quebrado ou inchaço? Fale com nossa equipe e receba orientação para o atendimento.</p>
+        <div class="pa-actions">
+          <a class="pa-btn pa-btn-primary" href="https://wa.me/5561991899393?text=Ol%C3%A1%21%20Preciso%20de%20atendimento%20odontol%C3%B3gico%20de%20urg%C3%AAncia." target="_blank" rel="noopener noreferrer" data-cta="hero-whatsapp" aria-label="Chamar equipe pelo WhatsApp para urgência odontológica">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.51 2 2.02 6.47 2.02 11.98c0 1.76.46 3.49 1.35 5.01L2 22l5.14-1.34a10.06 10.06 0 0 0 4.9 1.25h.01c5.52 0 10.02-4.48 10.02-9.99A9.98 9.98 0 0 0 12.04 2Zm0 18.23a8.34 8.34 0 0 1-4.24-1.16l-.3-.18-3.14.82.84-3.05-.19-.31a8.28 8.28 0 0 1-1.27-4.38 8.3 8.3 0 0 1 8.3-8.28 8.26 8.26 0 0 1 8.29 8.3 8.3 8.3 0 0 1-8.29 8.24Zm4.55-6.2c-.25-.13-1.48-.73-1.71-.82-.23-.08-.4-.12-.56.13-.17.25-.65.82-.79.98-.15.17-.3.19-.55.07-.25-.13-1.05-.39-1.98-1.23-.73-.65-1.23-1.45-1.37-1.7-.15-.25-.02-.39.11-.51.11-.11.25-.3.37-.44.13-.15.17-.25.25-.42.08-.16.04-.31-.02-.43-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.08 0 1.23.9 2.42 1.03 2.59.12.16 1.79 2.73 4.32 3.83.6.26 1.07.41 1.44.53.61.19 1.17.16 1.6.1.49-.08 1.48-.61 1.69-1.2.21-.59.21-1.09.15-1.2-.06-.1-.23-.17-.48-.3Z"/></svg>
+            <span>Chamar no WhatsApp</span>
+          </a>
+          <a class="pa-btn pa-btn-secondary" href="tel:+5561991899393" data-cta="hero-call">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-3.28 2.25 19.79 19.79 0 0 1-8.63-8.63A2 2 0 0 1 12.34 10h3a2 2 0 0 1 2 1.72c.12.81.33 1.6.63 2.35a2 2 0 0 1-.45 2.11l-1.27 1.27a16 16 0 0 0 2.3 2.3l1.26-1.28a2 2 0 0 1 2.11-.45c.76.3 1.55.51 2.36.63" transform="translate(-2 -2) scale(.93)"/></svg>
+            <span>Ligar agora</span>
+          </a>
+        </div>
+        <div class="pa-social-row">
+          <a class="pa-rating" href="https://share.google/HWwqK2HnZtegXTeoN" target="_blank" rel="noopener noreferrer" data-cta="hero-reviews" aria-label="5 de 5 estrelas no Google. Ver avaliações da clínica">
+            <span class="pa-stars" aria-hidden="true">★★★★★</span>
+            <span><strong>5,0/5 no Google</strong><small>Ver avaliações reais <span aria-hidden="true">↗</span></small></span>
+          </a>
+          <span class="pa-social-divider" aria-hidden="true"></span>
+          <a class="pa-location-link" href="https://www.google.com/maps/search/?api=1&amp;query=SGAS%20915%20Centro%20Cl%C3%ADnico%20Advance%202%20Bras%C3%ADlia" target="_blank" rel="noopener noreferrer" data-cta="hero-directions">⌖ Como chegar</a>
+        </div>
+        <p class="pa-disclaimer">Atendimento particular · Consulte a disponibilidade da equipe pelo WhatsApp ou telefone.</p>
+      </div>
+    </div></section>
+
+    <section class="pa-urgent" id="urgencias" aria-labelledby="pa-urgent-title"><div class="pa-container">
+      <div class="pa-section-head"><span class="pa-section-kicker">URGÊNCIAS MAIS COMUNS</span><h2 id="pa-urgent-title">Precisa de ajuda com algum destes sintomas?</h2><p>Nossa equipe avalia a necessidade de atendimento e orienta os próximos passos.</p></div>
+      <div class="pa-urgent-grid"><div><span aria-hidden="true">✦</span> Dor de dente intensa</div><div><span aria-hidden="true">✦</span> Dente quebrado</div><div><span aria-hidden="true">✦</span> Inchaço e infecção</div><div><span aria-hidden="true">✦</span> Trauma ou sangramento</div></div>
+    </div></section>
+
+    <section class="pa-reviews-section" id="avaliacoes" aria-labelledby="pa-reviews-title"><div class="pa-container pa-reviews-inner">
+      <div><span class="pa-section-kicker">CONFIANÇA DE QUEM JÁ FOI ATENDIDO</span><h2 id="pa-reviews-title">Avaliações da nossa clínica no Google</h2><p>Acesse as opiniões publicadas por pacientes diretamente no Google.</p></div>
+      <div class="pa-reviews-box"><span class="pa-stars pa-stars-large" aria-hidden="true">★★★★★</span><div class="pa-rating-big">5,0 <span>de 5 no Google</span></div><a class="pa-reviews-link" href="https://share.google/HWwqK2HnZtegXTeoN" target="_blank" rel="noopener noreferrer" data-cta="reviews-section">Ver todas as avaliações <span aria-hidden="true">↗</span></a></div>
+    </div></section>
+
+    <section class="pa-address" id="localizacao"><div class="pa-container"><strong>Parnaso Ateliê Oral</strong><span>Centro Clínico Advance 2, SGAS 915, Conjunto O, salas 16/17 — Asa Sul, Brasília/DF</span></div></section>
+  </main>
+
+  <nav class="pa-mobile-sticky" aria-label="Ações rápidas de urgência">
+    <a class="pa-sticky-wa" href="https://wa.me/5561991899393?text=Ol%C3%A1%21%20Preciso%20de%20atendimento%20odontol%C3%B3gico%20de%20urg%C3%AAncia." target="_blank" rel="noopener noreferrer" data-cta="sticky-whatsapp">WhatsApp</a>
+    <a class="pa-sticky-call" href="tel:+5561991899393" data-cta="sticky-call">Ligar agora</a>
+  </nav>
+  <script>
+    const paMenuBtn = document.querySelector('#pa-menu-button');
+    const paMenu = document.querySelector('#pa-menu');
+    paMenuBtn?.addEventListener('click', () => {
+      const open = paMenu.classList.toggle('pa-nav-open');
+      paMenuBtn.setAttribute('aria-expanded', String(open));
+      paMenuBtn.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+    });
+    paMenu?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      paMenu.classList.remove('pa-nav-open');
+      paMenuBtn?.setAttribute('aria-expanded', 'false');
+      paMenuBtn?.setAttribute('aria-label', 'Abrir menu');
+    }));
+  </script>
+</body>
+</html>
