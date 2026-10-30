@@ -822,6 +822,22 @@ h3 {
   border-radius: 25px;
 }
 
+.whatsapp-symbol {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+}
+
+.whatsapp-symbol svg {
+  display: block;
+  width: 30px;
+  height: 30px;
+  color: #000;
+}
+
 .experience-badge {
   align-items: center;
 
@@ -2496,17 +2512,6 @@ a {
   background: #1da851;
   box-shadow: 0 12px 30px rgba(37, 211, 102, 0.28);
   transform: translateY(-3px);
-}
-
-.whatsapp-symbol {
-  border: 2px solid currentColor;
-  border-radius: 50%;
-  display: grid;
-  flex: 0 0 32px;
-  font-size: 1.15rem;
-  height: 32px;
-  place-items: center;
-  width: 32px;
 }
 
 .hero-whatsapp-button span:nth-child(2) {
