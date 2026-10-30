@@ -814,9 +814,12 @@ h3 {
 }
 
 .image-placeholder-large {
+  display: block;
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  max-width: 100%;
   border-radius: 25px;
-
-  min-height: 560px;
 }
 
 .experience-badge {
